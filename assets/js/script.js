@@ -6,17 +6,37 @@ const newQuoteBtn = document.querySelector(".new-quote-btn");
 async function getQuote() {
   const quoteApiUrl = "https://api.adviceslip.com/advice";
 
-  const response = await fetch(quoteApiUrl);
+  newQuoteBtn.disabled = true;
+  quoteDisplay.style.opacity = 0;
 
-  const result = await response.json();
+  try {
+    const response = await fetch(quoteApiUrl);
 
-  const data = result.slip;
+    if (!response.ok) {
+      throw new Error("Failed to fetch advice");
+    }
 
-  const quoteNumber = data.id;
-  const quoteText = data.advice;
+    const result = await response.json();
+    const { id, advice } = result.slip;
 
-  quoteNumberDisplay.textContent = quoteNumber;
-  quoteDisplay.textContent = quoteText;
+    setTimeout(() => {
+      quoteNumberDisplay.textContent = id;
+      quoteDisplay.textContent = advice;
+
+      quoteDisplay.style.opacity = 1;
+    }, 300);
+  } catch (error) {
+    setTimeout(() => {
+      quoteNumberDisplay.textContent = "⚠️";
+      quoteDisplay.textContent = "Oops! Something went wrong. Try again.";
+
+      quoteDisplay.style.opacity = 1;
+    }, 300);
+
+    console.error(error);
+  } finally {
+    newQuoteBtn.disabled = false;
+  }
 }
 
 newQuoteBtn.addEventListener("click", getQuote);
