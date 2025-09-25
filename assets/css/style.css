@@ -1,0 +1,67 @@
+body {
+  background-color: var(--color-blue-950);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding-inline: 1rem;
+}
+
+.advice-card {
+  display: grid;
+  justify-items: center;
+  gap: var(--spacing-500);
+  background-color: var(--color-blue-900);
+  border-radius: 0.9375rem;
+  box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.1);
+  padding: 3rem 3rem 0 3rem;
+  width: 100%;
+  max-width: 33.75rem;
+}
+
+.advice-text-container {
+  display: grid;
+  text-align: center;
+  gap: var(--spacing-300);
+}
+
+.advice-number-wrapper {
+  color: var(--color-green-300);
+}
+
+.advice-quote {
+  color: var(--color-blue-200);
+}
+
+.advice-quote::before {
+  content: "“";
+}
+
+.advice-quote::after {
+  content: "”";
+}
+
+.divider-img {
+  width: 100%;
+}
+
+.new-quote-btn {
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 1.25rem;
+  background-color: var(--color-green-300);
+  cursor: pointer;
+  transition: all 200ms;
+  margin-bottom: -2rem;
+}
+
+.new-quote-btn:hover {
+  box-shadow: 0 0 40px var(--color-green-300);
+}
+/* Responsive design */
+@media (width < 24.5rem) {
+  .advice-card {
+    padding: 2.5rem 23.5px 0 23.5px;
+  }
+}

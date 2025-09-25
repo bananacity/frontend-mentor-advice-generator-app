@@ -1,0 +1,54 @@
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+
+  --color-blue-950: #202733;
+  --color-blue-900: #313a48;
+  --color-blue-600: #4f5d74;
+  --color-blue-200: #cee3e9;
+
+  --color-green-300: #53ffaa;
+
+  /* Spacing */
+  --spacing-0: 0rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+}
+
+/* Typography */
+.text-preset-1 {
+  font-size: 1.75rem;
+  letter-spacing: -0.3px;
+}
+
+.text-preset-2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.3px;
+}
+
+.text-preset-3 {
+  font-size: 0.8125rem;
+  letter-spacing: 4px;
+}
+
+/* Responsive text */
+@media (width < 24.5rem) {
+  .text-preset-1 {
+    font-size: 1.5rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.35;
+  font-weight: 800;
+}

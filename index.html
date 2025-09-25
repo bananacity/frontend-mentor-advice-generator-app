@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advice Generator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/general.css" />
+  </head>
+  <body>
+    <main>
+      <article class="advice-card">
+        <div class="advice-text-container">
+          <h1 class="advice-number-wrapper text-preset-3">
+            ADVICE #<span class="advice-number"></span>
+          </h1>
+
+          <p class="advice-quote text-preset-1"></p>
+        </div>
+
+        <picture>
+          <source
+            media="(width >= 23.5rem)"
+            srcset="assets//images/pattern-divider-desktop.svg"
+          />
+          <source
+            media="(width < 23.5rem)"
+            srcset="assets//images/pattern-divider-mobile.svg"
+          />
+          <img
+            src="assets//images/pattern-divider-desktop.svg"
+            alt=""
+            class="divider-img"
+            draggable="false"
+          />
+        </picture>
+
+        <button class="new-quote-btn">
+          <img
+            src="assets/images/icon-dice.svg"
+            alt="Dice icon"
+            draggable="false"
+          />
+        </button>
+      </article>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
