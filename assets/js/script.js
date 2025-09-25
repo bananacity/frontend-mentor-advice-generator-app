@@ -11,7 +11,7 @@ async function getQuote() {
   quoteNumberDisplay.style.opacity = 0;
 
   try {
-    const response = await fetch(quoteApiUrl);
+    const response = await fetch(quoteApiUrl, { cache: "no-store" });
 
     if (!response.ok) {
       throw new Error("Failed to fetch advice");
