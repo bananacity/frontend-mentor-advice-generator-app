@@ -8,6 +8,7 @@ async function getQuote() {
 
   newQuoteBtn.disabled = true;
   quoteDisplay.style.opacity = 0;
+  quoteNumberDisplay.style.opacity = 0;
 
   try {
     const response = await fetch(quoteApiUrl);
@@ -24,6 +25,7 @@ async function getQuote() {
       quoteDisplay.textContent = advice;
 
       quoteDisplay.style.opacity = 1;
+      quoteNumberDisplay.style.opacity = 1;
     }, 300);
   } catch (error) {
     setTimeout(() => {
@@ -31,6 +33,7 @@ async function getQuote() {
       quoteDisplay.textContent = "Oops! Something went wrong. Try again.";
 
       quoteDisplay.style.opacity = 1;
+      quoteNumberDisplay.style.opacity = 1;
     }, 300);
 
     console.error(error);

@@ -24,6 +24,11 @@ body {
   gap: var(--spacing-300);
 }
 
+.advice-number {
+  opacity: 1;
+  transition: all 300ms ease;
+}
+
 .advice-number-wrapper {
   color: var(--color-green-300);
 }
